@@ -30,12 +30,22 @@ public class WordManager {
             if(menu == 0)  break;
             if(menu == 4){
                 //create
-                wordCRUD.addWord();
+                wordCRUD.addItem();
             }
             else if(menu == 1){
                 //list보여주기
                 wordCRUD.listAll();
             }
+            else if(menu == 5){
+                //list보여주기
+                wordCRUD.updateItem();
+            }
+            else if(menu == 6){
+                //list보여주기
+                wordCRUD.deleteItem();
+
+            }
+
         }
     }
 
