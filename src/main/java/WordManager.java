@@ -25,6 +25,7 @@ public class WordManager {
 
     }
     public  void start(){
+        wordCRUD.loadFile();
         while(true){
             int menu = selectMenu();
             if(menu == 0)  break;
@@ -36,6 +37,14 @@ public class WordManager {
                 //list보여주기
                 wordCRUD.listAll();
             }
+            else if(menu == 2){
+                //list보여주기
+                wordCRUD.searchLevel();
+            }
+            else if(menu == 3){
+                //list보여주기
+                wordCRUD.searchWord();
+            }
             else if(menu == 5){
                 //list보여주기
                 wordCRUD.updateItem();
@@ -43,9 +52,11 @@ public class WordManager {
             else if(menu == 6){
                 //list보여주기
                 wordCRUD.deleteItem();
-
             }
-
+            else if(menu == 7){
+                //list보여주기
+                wordCRUD.saveFile();
+            }
         }
     }
 
