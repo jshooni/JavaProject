@@ -12,9 +12,9 @@ public class WordManager {
         System.out.print("*** 영단어 마스터 ***\n"
                 + "********************\n"
                 + "1. 모든 단어 보기 \n"
-                + "2. 수전별 단어 보기"
+                + "2. 수준별 단어 보기\n"
                 + "3. 단어 검색\n"
-                + "4. 단어 추가"
+                + "4. 단어 추가\n"
                 + "5. 단어 수정\n"
                 + "6. 단어 삭제\n"
                 + "7. 파일 저장\n"
@@ -28,7 +28,10 @@ public class WordManager {
         wordCRUD.loadFile();
         while(true){
             int menu = selectMenu();
-            if(menu == 0)  break;
+            if(menu == 0){
+                System.out.println("프로그램 종료!!!!!");
+                break;
+            }
             if(menu == 4){
                 //create
                 wordCRUD.addItem();
@@ -38,23 +41,18 @@ public class WordManager {
                 wordCRUD.listAll();
             }
             else if(menu == 2){
-                //list보여주기
                 wordCRUD.searchLevel();
             }
             else if(menu == 3){
-                //list보여주기
                 wordCRUD.searchWord();
             }
             else if(menu == 5){
-                //list보여주기
                 wordCRUD.updateItem();
             }
             else if(menu == 6){
-                //list보여주기
                 wordCRUD.deleteItem();
             }
             else if(menu == 7){
-                //list보여주기
                 wordCRUD.saveFile();
             }
         }
